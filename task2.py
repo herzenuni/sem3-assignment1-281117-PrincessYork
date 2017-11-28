@@ -6,13 +6,9 @@ def digits_pow_sum(number):
 	return sum
 
 def start():
-	print("двузначные :")
-	for i in range(10, 100):
-		if digits_pow_sum(i) % 17 == 0:
-			print(i, end = ', ')
-	
-	print("\nтрехзначные :")
-	for i in range(100, 1000):
+	n = int(input("n = "))
+	print("{} значные числа, сумма квадратов цифр которых делится на 17 без остатка :". format(n))
+	for i in range(10 ** (n - 1), 10 ** n):
 		if digits_pow_sum(i) % 17 == 0:
 			print(i, end = ', ')
 	print()
